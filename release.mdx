@@ -1,0 +1,100 @@
+---
+title: "Release Note "
+keywords: ["Release-Note "]
+---
+
+# Ano de 2026
+
+<Accordion icon="bug" title="Correção">
+  \*\*27 de Fevereiro de 2026, Versão 1.00 \*\*
+
+  Esta versão corrige o comportamento do cancelamento de guias TISS importadas no **SGU ATD**, alinhando o sistema à especificação funcional **S20ATDDES‑2490**.
+
+  De acordo com o padrão TISS, o sistema deve permitir o cancelamento de guias importadas via XML mesmo antes da integração ao SGU GPL, desde que cumpridas as validações de negócio. Entretanto, o sistema permitia o cancelamento apenas após a integração, impedindo a operação em guias presentes exclusivamente na tabela CM_TISS_GUIA do SGU ATD.
+
+  ## Correção Implementada
+
+  O fluxo de cancelamento foi ajustado para permitir que:
+
+  - Guias não integradas ao SGU GPL possam ser canceladas
+  - Todas as validações existentes continuem sendo aplicadas.
+  - A comunicação com o WebService do SGU GPL ocorra somente quando necessária..
+
+  ## Regras de Validação Mantidas
+
+  O cancelamento só é permitido se a guia:
+
+  -  Não estiver em Arbitragem (TP_SITUACAO = 14);
+  - Não estiver em Pagamento (TP_SITUACAO = 6);
+  - Passar pelas validações:
+
+  1. RegraGuiaImportada
+  2.  RegraGuiaExportada
+  3. RegraGuiaEmPagamento
+  4. RegraGuiaEmArbitragem
+
+  ## Fluxo da Operação
+
+  1.  Usuário solicita o cancelamento da guia importada.
+  2. O sistema executa as validações de regra de negócio.
+  3. Se a guia não estiver integrada ao GPL e não estiver bloqueada, o cancelamento é autorizado.
+  4. Quando aplicável, o SGU ATD aciona o WebService do SGU GPL.
+  5. A guia é atualizada para: **TP_SITUACAO = 15 (Cancelada)**
+
+  ## Resultado da Correção
+
+  -  Comportamento alinhado à especificação funcional.
+  -  Conformidade com o padrão TISS mantido.
+  -  Cancelamento de guias importadas funcionando conforme esperado.
+  -  Remoção da inconsistência entre regra documentada e comportamento do sistema.
+
+  ## Impacto para o Cliente
+
+  Não há alterações de layout ou inclusão de novas funcionalidades.
+
+  Trata‑se de uma correção de regra de negócio, garantindo que o cancelamento de guias importadas funcione conforme definido originalmente.
+
+  Em caso de dúvidas, o time de suporte NEXDOM permanece à disposição
+
+  <Tip>
+    **A correção encontra-se em implantação para os ambientes Mobile e eDesk, garantindo alinhamento funcional entre todas as plataformas.**
+  </Tip>
+</Accordion>
+
+<Accordion icon="gear" title="Melhorias">
+  Ainda não há melhorias registradas. Novidades em breve.
+</Accordion>
+
+<Accordion icon="rocket-launch" title="Novo Laçamento">
+  Ainda não há melhorias registradas. Novidades em breve.
+</Accordion>
+
+# Ano de 2025
+
+<Accordion icon="bug" title="Correção">
+  \*\*29 de Dezembro de 2025, Versão 1.00 \*\*
+
+  Aqui existe um exemplo de correção.
+
+  <Tip>
+    **A correção encontra-se em implantação para os ambientes Mobile e eDesk, garantindo alinhamento funcional entre todas as plataformas.**
+  </Tip>
+</Accordion>
+
+<Accordion icon="gear" title="Melhorias">
+  **29 de Dezembro de 2025, Versão 1.00**
+
+  Aqui existe um exemplo de Melhorias..
+
+  <Tip>
+    **A correção encontra-se em implantação para os ambientes Mobile e eDesk, garantindo alinhamento funcional entre todas as plataformas.**
+  </Tip>
+</Accordion>
+
+<Accordion icon="rocket" title="Novo Lançamento">
+  Aqui existe um exemplo de Novo Lançamento.
+
+  <Tip>
+    **A correção encontra-se em implantação para os ambientes Mobile e eDesk, garantindo alinhamento funcional entre todas as plataformas.**
+  </Tip>
+</Accordion>
