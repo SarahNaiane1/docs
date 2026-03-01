@@ -15,9 +15,8 @@
         "tab": "Release Notes",
         "groups": [
           {
-            "group": "NEXDOM | RELELASE NOTE ",
+            "group": "Sistema SGU ATD.",
             "icon": "note-sticky",
-            "hidden": true,
             "pages": [
               "release"
             ]
