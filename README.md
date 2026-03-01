@@ -1,55 +1,60 @@
-# Mintlify Starter Kit
+# 📘 Release Notes – SGU ATD
 
-Use the starter kit to get your docs deployed and ready to customize.
+Este repositório contém exclusivamente a documentação de **Release Notes** do sistema SGU ATD.
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+## 🔗 Acesso à Documentação
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
+A documentação pode ser acessada online pelo link:
 
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
+https://certsys.mintlify.app/release
 
-## AI-assisted writing
+## 🛠 Plataforma Utilizada
 
-Set up your AI coding tool to work with Mintlify:
+A documentação foi desenvolvida utilizando a plataforma **Mintlify**.
 
-```bash
-npx skills add https://mintlify.com/docs
-```
+## 📂 Estrutura do Projeto
 
-This command installs Mintlify's documentation skill for your configured AI tools like Claude Code, Cursor, Windsurf, and others. The skill includes component reference, writing standards, and workflow guidance.
+### api-reference/
+Estrutura padrão para documentação de APIs (quando aplicável).
 
-See the [AI tools guides](/ai-tools) for tool-specific setup.
+### essentials/
+Arquivos auxiliares do template base do Mintlify.
 
-## Development
+### images/
+Imagens utilizadas na documentação.
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
+### logo/
+Arquivos de logotipo exibidos na interface.
 
-```
-npm i -g mint
-```
+### snippets/
+Blocos reutilizáveis de conteúdo.
 
-Run the following command at the root of your documentation, where your `docs.json` is located:
+### .mintignore
+Arquivos ignorados no processo de build da documentação.
 
-```
-mint dev
-```
+### AGENTS.md
+Informações relacionadas a automações ou agentes.
 
-View your local preview at `http://localhost:3000`.
+### CONTRIBUTING.md
+Diretrizes para contribuição no repositório.
 
-## Publishing changes
+### LICENSE
+Licença do projeto.
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
+### README.md
+Informações gerais sobre o repositório.
 
-## Need help?
+### development.mdx
+Página auxiliar voltada para ambiente de desenvolvimento.
 
-### Troubleshooting
+### docs.json
+Arquivo principal de configuração do Mintlify.
 
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
+### favicon.svg
+Ícone exibido na aba do navegador.
 
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
+### index.mdx
+Página inicial da documentação.
+
+### release.mdx
+Página dedicada às Release Notes.
