@@ -15,8 +15,12 @@
         "tab": "Release Notes",
         "groups": [
           {
-            "group": "2026",
-            "pages": ["release"]
+            "group": "NEXDOM | RELELASE NOTE ",
+            "icon": "note-sticky",
+            "hidden": true,
+            "pages": [
+              "release"
+            ]
           }
         ]
       }
